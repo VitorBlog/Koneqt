@@ -1,8 +1,26 @@
-<section class="grid auto-cols-[minmax(0,24rem)] h-screen" [ngClass]="[profile.theme, profile.color]">
-  <app-avatar class="col-span-1 row-span-{{ maxRow }}" [avatar]="profile.avatar"></app-avatar>
+<section class="p-8 grid grid-flow-col grid-cols-{{ maxColumn }}A auto-cols-[minmax(0,24rem)] w-full h-screen" [ngClass]="[profile.theme, profile.color]">
+  <!-- <app-avatar class="col-span-1 row-span-{{ maxRow }}" [avatar]="profile.avatar"></app-avatar>
 
-  <!-- To-do: Recreate grid logic by separating by columns and rows, not items -->
+  <-- To-do: Recreate grid logic by separating by columns and rows, not items --
   <app-item *ngFor="let item of profile.items" [item]="item"
             class="border border-red-500 col-start-{{ item.responsive.column }} row-start-{{ item.responsive.row }}">
-  </app-item>
+  </app-item>-->
+
+  <div class="border-2 border-blue-500 col-start-{{ cIndex }}" *ngFor="let i of [].constructor(maxColumn); let cIndex = index">
+    @if (profile.avatar.responsive.column == cIndex) {
+      <app-avatar class="col-span-{{ cIndex }} row-span-{{ maxRow }}" [avatar]="profile.avatar"></app-avatar>
+    }
+    @else {
+      <div class="p-1 border-2 border-red-500" *ngFor="let i of [].constructor(maxRow); let rIndex = index">
+        @if (getItem(cIndex, rIndex); as item) {
+          <app-item [item]="item"
+                    class="border border-red-500 col-start-{{ item.responsive.column }} row-start-{{ item.responsive.row }}">
+          </app-item>
+        }
+        @else {
+         {{ cIndex }} - {{ rIndex }}
+        }
+      </div>
+    }
+  </div>
 </section>

@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
-.card-background {
-  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+.card {
+  @apply rounded-xl shadow p-4;
 }
 
 .dark {
   background: #101010;
   color: #FFF;
 
-  .card-background {
+  .card {
     background: #252525;
   }
 }

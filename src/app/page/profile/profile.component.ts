@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, justo et condimentum lobortis, urna sem cursus risus, non accumsan augue odio quis diam. Pellentesque sit amet libero vel nisi malesuada efficitur gravida sit amet mi.',
       photo: 'https://placehold.co/150x150/0000FF/FFFFFF?text=Avatar',
       responsive: {
-        column: 1,
+        column: 0,
         row: 0
       }
     },
@@ -33,8 +33,8 @@ export class ProfileComponent implements OnInit {
         link: 'https://johndoe.com/portfolio',
         color: 'light',
         responsive: {
-          column: 3,
-          row: 4
+          column: 1,
+          row: 0
         }
       },
       {
@@ -45,8 +45,8 @@ export class ProfileComponent implements OnInit {
         link: 'https://johndoe.com/blog',
         color: 'purple',
         responsive: {
-          column: 3,
-          row: 2
+          column: 2,
+          row: 3
         }
       },
       {
@@ -56,7 +56,7 @@ export class ProfileComponent implements OnInit {
         link: 'https://github.com/johndoe',
         color: 'red',
         responsive: {
-          column: 4,
+          column: 3,
           row: 2
         }
       },
@@ -67,33 +67,24 @@ export class ProfileComponent implements OnInit {
         link: 'https://github.com/johndoe',
         color: 'red',
         responsive: {
-          column: 5,
-          row: 4
+          column: 4,
+          row: 3
         }
       },
     ],
   };
 
-  maxRow = 1;
-  maxColumn = 1;
+  maxRow = 4;
+  maxColumn = 5;
 
   ngOnInit() {
-    this.profile.items.sort((a, b) => {
-      if (a.responsive?.column !== b.responsive?.column) {
-        return a.responsive?.column - b.responsive?.column;
-      }
-
-      return a.responsive?.row - b.responsive?.row;
-    });
-
-    console.log(this.profile.items)
     this.maxColumn = this.keepMax(this.maxColumn, this.profile.avatar?.responsive?.column);
     for (let item of this.profile.items) {
       this.maxRow = this.keepMax(this.maxRow, item?.responsive?.row);
       this.maxColumn = this.keepMax(this.maxColumn, item?.responsive?.column);
     }
 
-    console.log(this.maxRow, this.maxColumn)
+    this.profile.items
   }
 
   private keepMax(actual: number, value?: number): number {
@@ -102,5 +93,9 @@ export class ProfileComponent implements OnInit {
     }
 
     return value;
+  }
+
+  getItem(column: number, row: number) {
+    return this.profile.items.find(value => value.responsive.column == column && value.responsive.row == row);
   }
 }
