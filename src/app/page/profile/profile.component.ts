@@ -16,9 +16,9 @@ export class ProfileComponent implements OnInit {
     theme: 'dark',
     color: 'blue',
     avatar: {
-      title: 'John Doe',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Son accumsan augue odio quis diam. Pellentesque sit amet libero vel nisi malesuada efficitur gravida sit amet mi.',
-      photo: 'https://placehold.co/150x150/0000FF/FFFFFF?text=Avatar',
+      title: 'Vitor Paulo',
+      description: 'Um desenvolvedor com muitos sonhos.',
+      photo: '/avatar.jpeg',
       responsive: {
         column: 0,
         row: 0
@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit {
     items: [
       {
         title: 'Poster',
-        photo: 'https://placehold.co/300x200/0000FF/FFFFFF?text=Portfolio',
+        photo: '/poster.jpg',
         size: 'poster',
         link: 'https://johndoe.com/portfolio',
         responsive: {
@@ -48,35 +48,79 @@ export class ProfileComponent implements OnInit {
         }
       },
       {
-        title: 'Card',
-        photo: 'https://placehold.co/300x200/FF0000/FFFFFF?text=GitHub',
-        size: 'card',
-        link: 'https://github.com/johndoe',
-        color: 'red',
+        title: 'Eu sou um titulo',
+        size: 'line',
         responsive: {
-          column: 3,
+          column: 2,
+          row: 0
+        }
+      },
+      {
+        photo: 'https://img.icons8.com/ios11/200/FFFFFF/github.png',
+        size: 'icon',
+        link: 'https://github.com/johndoe',
+        responsive: {
+          column: 2,
           row: 2
         }
       },
       {
-        title: 'Cube',
-        photo: 'https://placehold.co/300x200/FF0000/FFFFFF?text=GitHub',
+        photo: 'https://img.icons8.com/ios11/200/FFFFFF/instagram.png',
+        size: 'icon',
+        link: 'https://github.com/johndoe',
+        responsive: {
+          column: 2,
+          row: 2
+        }
+      },
+      {
+        photo: 'https://img.icons8.com/ios11/200/FFFFFF/facebook.png',
+        size: 'icon',
+        link: 'https://github.com/johndoe',
+        responsive: {
+          column: 2,
+          row: 2
+        }
+      },
+      {
+        photo: 'https://img.icons8.com/ios11/200/FFFFFF/tiktok.png',
+        size: 'icon',
+        link: 'https://github.com/johndoe',
+        responsive: {
+          column: 2,
+          row: 2
+        }
+      },
+      {
+        title: 'Cube A',
+        photo: '/other.jpg',
         size: 'cube',
         link: 'https://github.com/johndoe',
         color: 'red',
         responsive: {
-          column: 4,
+          column: 1,
+          row: 3
+        }
+      },
+      {
+        title: 'Cube B',
+        photo: '/other2.png',
+        size: 'cube',
+        link: 'https://github.com/johndoe',
+        color: 'red',
+        responsive: {
+          column: 1,
           row: 3
         }
       },
       {
         title: 'Square',
-        photo: 'https://placehold.co/300x200/FF0000/FFFFFF?text=GitHub',
+        photo: '/other.jpg',
         size: 'square',
         link: 'https://github.com/johndoe',
         color: 'red',
         responsive: {
-          column: 4,
+          column: 2,
           row: 1
         }
       },
@@ -104,7 +148,12 @@ export class ProfileComponent implements OnInit {
     return value;
   }
 
-  getItem(column: number, row: number) {
-    return this.profile.items.find(value => value.responsive.column == column && value.responsive.row == row);
+  getItems(column: number, row: number) {
+    const value = this.profile.items.filter(value => value.responsive.column == column && value.responsive.row == row);
+    if (value.length == 0) {
+      return undefined;
+    }
+
+    return value;
   }
 }

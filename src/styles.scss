@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 .card {
-  @apply rounded-xl shadow p-2 inline-flex items-center gap-2;
+  @apply rounded-xl shadow p-2 inline-flex items-center gap-2 overflow-hidden;
 
   .card-alt {
     @apply z-10 absolute bottom-0 left-0 mx-2 my-2 bg-white text-black rounded-xl p-2 text-sm pointer-events-none;
   }
 
   .card-photo {
-    @apply size-12 rounded inset-0 object-cover pointer-events-none;
+    @apply size-12 rounded inset-0 object-cover pointer-events-none transform transition-all;
   }
 
   .card-background {
@@ -43,5 +43,11 @@
 }
 
 .cube {
-  @apply size-32;
+  @apply size-26;
+}
+
+.icon {
+  background: none !important;
+
+  @apply size-12 p-0;
 }
