@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.card-background {
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.dark {
+  background: #101010;
+  color: #FFF;
+
+  .card-background {
+    background: #252525;
+  }
+}
+
+.light {
+  background: #FFF;
+  color: #101010;
+}

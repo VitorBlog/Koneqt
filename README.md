@@ -1,59 +1,32 @@
 # Koneqt
+> A blatant copycat of [Bento](http://bento.me/) and [Linktree](http://linktr.ee/), but with the audacity to improve things.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+## 🚀 What is Koneqt?
+🚧 **Koneqt is still in development and not available online yet. Stay tuned!** 🚧
 
-## Development server
+Koneqt is a simple yet powerful link management tool designed to help users consolidate their online presence. Like its *"inspirations"*, it allows you to create a personalized landing page for all your links—but better (or at least, that's the goal). Whether you're an influencer, a content creator, or just someone who has way too many social media profiles, Koneqt makes it easy to share everything in one place.
 
-To start a local development server, run:
+## 🎯 Features
+- [ ] 📌 **Profiles** – Base components and style.
+- [ ] 📊 **Dashboard** – Create and personalize your link page with ease.
+- [ ] 🎨 **Themes & Styling** – Choose from built-in themes or customize theme.
+- [ ] 📊 **Analytics** – Track clicks, engagement, and visitor stats to optimize your page.
+- [ ] 🔗 **Unlimited Links** – No artificial limits—because why should you have to choose?
+- [ ] ⚡ **Fast & Responsive** – Optimized for speed and mobile-friendliness.
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Installation
+If you want to run Koneqt locally, follow these steps:
 
 ```bash
-ng generate --help
+$ git clone https://github.com/VitorBlog/Koneqt.git
+$ cd Koneqt
+$ npm install  # or yarn install
+$ npm start    # or yarn start
 ```
 
-## Building
+## 🤝 Contributing
+Pull requests are welcome! If you have an idea that can make Koneqt even better, feel free to fork, tweak, and send a PR. We encourage collaboration and feedback from the community.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+_Hopefully better than the originals. If not, at least i tried._ 😆
