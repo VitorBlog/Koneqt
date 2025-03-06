@@ -1,3 +1,15 @@
-<div class="w-full h-full card">
-  {{ item.title }}
-</div>
+<a [href]="item.link" class="relative card {{ item.color }} {{ item.size }}">
+  @if (item.photo) {
+    <img [src]="item.photo" [alt]="item.title" class="card-photo" [class.card-background]="hasBackground">
+  }
+
+  <div>
+    <p [class.card-alt]="hasBackground">
+      {{ item.title }}
+    </p>
+
+    @if (item.description) {
+      <p class="font-light text-xs">{{ item.description }}</p>
+    }
+  </div>
+</a>

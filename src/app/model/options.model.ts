@@ -5,7 +5,7 @@ export interface ItemOptions {
   description?: string;
   responsive: ResponsiveOptions;
   color?: 'dark' | 'light' | 'red' | 'purple' | 'blue';
-  size: 'cube-s' | 'cube-m' | 'cube-l' | 'line-s' | 'line-m' | 'line-l';
+  size: 'cube' | 'line' | 'card' | 'poster' | 'square';
 }
 
 export interface AvatarOptions {

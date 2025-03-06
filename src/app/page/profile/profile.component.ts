@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
     color: 'blue',
     avatar: {
       title: 'John Doe',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, justo et condimentum lobortis, urna sem cursus risus, non accumsan augue odio quis diam. Pellentesque sit amet libero vel nisi malesuada efficitur gravida sit amet mi.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Son accumsan augue odio quis diam. Pellentesque sit amet libero vel nisi malesuada efficitur gravida sit amet mi.',
       photo: 'https://placehold.co/150x150/0000FF/FFFFFF?text=Avatar',
       responsive: {
         column: 0,
@@ -26,22 +26,20 @@ export class ProfileComponent implements OnInit {
     },
     items: [
       {
-        title: 'Portfolio',
-        description: 'Check out my work',
+        title: 'Poster',
         photo: 'https://placehold.co/300x200/0000FF/FFFFFF?text=Portfolio',
-        size: 'cube-m',
+        size: 'poster',
         link: 'https://johndoe.com/portfolio',
-        color: 'light',
         responsive: {
           column: 1,
           row: 0
         }
       },
       {
-        title: 'Blog',
+        title: 'Line',
         description: 'Read my latest posts',
         photo: 'https://placehold.co/300x200/800080/FFFFFF?text=Blog',
-        size: 'line-s',
+        size: 'line',
         link: 'https://johndoe.com/blog',
         color: 'purple',
         responsive: {
@@ -50,9 +48,9 @@ export class ProfileComponent implements OnInit {
         }
       },
       {
-        title: 'My Spotify',
+        title: 'Card',
         photo: 'https://placehold.co/300x200/FF0000/FFFFFF?text=GitHub',
-        size: 'cube-s',
+        size: 'card',
         link: 'https://github.com/johndoe',
         color: 'red',
         responsive: {
@@ -61,14 +59,25 @@ export class ProfileComponent implements OnInit {
         }
       },
       {
-        title: 'GitHub',
+        title: 'Cube',
         photo: 'https://placehold.co/300x200/FF0000/FFFFFF?text=GitHub',
-        size: 'cube-s',
+        size: 'cube',
         link: 'https://github.com/johndoe',
         color: 'red',
         responsive: {
           column: 4,
           row: 3
+        }
+      },
+      {
+        title: 'Square',
+        photo: 'https://placehold.co/300x200/FF0000/FFFFFF?text=GitHub',
+        size: 'square',
+        link: 'https://github.com/johndoe',
+        color: 'red',
+        responsive: {
+          column: 4,
+          row: 1
         }
       },
     ],
