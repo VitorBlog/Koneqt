@@ -1,4 +1,10 @@
-<a [href]="item.link" class="relative card {{ item.color }} {{ item.size }}">
+<a [href]="item.link" class="group relative card {{ item.color }} {{ item.size }}">
+  @if (editor) {
+    <button class="opacity-0 group-hover:opacity-100 z-10 transition absolute top-0 left-0 m-1 bg-white rounded-full">
+      A
+    </button>
+  }
+
   @if (item.photo) {
     <img [src]="item.photo" [alt]="item.title" class="card-photo" [class.group-hover:scale-125]="hasBackground" [class.card-background]="hasBackground">
   }

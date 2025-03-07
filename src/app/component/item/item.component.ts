@@ -12,6 +12,9 @@ export class ItemComponent implements OnInit {
   @Input()
   item!: ItemOptions;
 
+  @Input()
+  editor!: boolean;
+
   hasBackground: boolean = false;
 
   ngOnInit() {

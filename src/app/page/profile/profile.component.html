@@ -1,3 +1,11 @@
+@if (editor) {
+  <section class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white rounded-xl p-4 mb-4 transition opacity-30 hover:opacity-100">
+    <button>
+      COMPARTILHAR
+    </button>
+  </section>
+}
+
 <section class="p-4 grid gap-4 grid-flow-col grid-cols-{{ maxColumn }}A auto-cols-[minmax(0,24rem)] w-full h-screen" [ngClass]="[profile.theme, profile.color]">
   <div class="col-start-{{ cIndex }}" *ngFor="let i of [].constructor(maxColumn); let cIndex = index">
     @if (profile.avatar.responsive.column == cIndex) {
@@ -8,6 +16,7 @@
         @if (getItems(cIndex, rIndex); as items) {
           @for (item of items; track item) {
             <app-item [item]="item"
+                      [editor]="editor"
                       class="group w-full col-start-{{ item.responsive.column }} row-start-{{ item.responsive.row }}">
             </app-item>
           }

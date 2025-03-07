@@ -10,7 +10,10 @@ export const routes: Routes = [
   {
     title: 'Dashboard - Koneqt',
     path: 'dashboard',
-    component: ProfileComponent
+    component: ProfileComponent,
+    data: {
+      'editor': true
+    }
   },
   {
     title: 'Profile - Koneqt',

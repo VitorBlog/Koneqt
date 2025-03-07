@@ -3,6 +3,7 @@ import {ItemComponent} from '../../component/item/item.component';
 import {AvatarComponent} from '../../component/avatar/avatar.component';
 import {ProfileOptions} from '../../model/options.model';
 import {CommonModule} from '@angular/common';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -129,6 +130,14 @@ export class ProfileComponent implements OnInit {
 
   maxRow = 4;
   maxColumn = 5;
+
+  editor: boolean = false;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.data.subscribe(data => {
+      this.editor = data['editor'] || false;
+    });
+  }
 
   ngOnInit() {
     this.maxColumn = this.keepMax(this.maxColumn, this.profile.avatar?.responsive?.column);
